@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const commander = require('commander'),
   init = require('./cmd/init')
   , products = require('./cmd/products'),

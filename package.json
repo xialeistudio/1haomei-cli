@@ -1,7 +1,7 @@
 {
   "name": "1haomei-cli",
   "description": "1号美数据爬虫",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "bin": {
