@@ -12,6 +12,7 @@ module.exports = async function () {
     list.push(...data);
     console.log(`读取分类商品[${category.name}]商品数[${data.length}]`.cyan);
   }
+  console.log(`成功读取${list.length}个商品`.green);
   console.log(`写入商品数据...`.cyan);
   const filename = path.join(process.cwd(), 'products.json');
   fs.writeFileSync(filename, JSON.stringify(list), 'utf-8');
