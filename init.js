@@ -2,12 +2,12 @@
  * 初始化项目
  * @param {string} name
  */
-import * as inquirer from 'inquirer';
-import * as fs from 'fs';
-import * as path from 'path';
-import 'colors';
+const inquirer = require('inquirer'),
+  fs = require('fs'),
+  path = require('path'),
+  colors = require('colors');
 
-export default async function () {
+module.exports = async function () {
   const answers = await inquirer.prompt([
     {
       name: 'name',
@@ -30,4 +30,4 @@ export default async function () {
   console.log('正在生成项目配置'.cyan);
   fs.writeFileSync(path.join(process.cwd(), 'project.json'), JSON.stringify(answers), 'UTF-8');
   console.log('项目生成完成'.green);
-}
+};
